@@ -84,7 +84,7 @@ function computeCirclularFlight(lon, lat, radius) {
         var position = Cesium.Cartesian3.fromDegrees(
           lon + (radius * 1.5 * Math.cos(radians)), 
           lat + (radius * Math.sin(radians)), 
-          Cesium.Math.nextRandomNumber() * 500 -50);
+          Cesium.Math.nextRandomNumber() * 500 -150);
         property.addSample(time, position);
 
         //Also create a point for each sample we generate.

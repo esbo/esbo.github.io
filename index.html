@@ -136,6 +136,11 @@ var entity = viewer.entities.add({
         width : 10
     }
 });
+    
+    entity.position.setInterpolationOptions({
+            interpolationDegree : 5,
+            interpolationAlgorithm : Cesium.LagrangePolynomialApproximation
+        });
 
 
 

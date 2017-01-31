@@ -21,8 +21,8 @@
   <script>
     var viewer = new Cesium.Viewer('cesiumContainer');
     viewer.dataSources.add(Cesium.GeoJsonDataSource.load('esbo.json', {
-      stroke: Cesium.Color.HOTPINK,
-      fill: Cesium.Color.PINK,
+      stroke: Cesium.Color.YELLOW.withAlpha(0.9),
+      fill: Cesium.Color.BLUE.withAlpha(0.5),
       strokeWidth: 3,
       markerSymbol: '?',
       clampToGround: true

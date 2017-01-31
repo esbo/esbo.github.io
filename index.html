@@ -62,7 +62,7 @@ viewer.scene.globe.enableLighting = true;
 Cesium.Math.setRandomNumberSeed(3);
 
 //Set bounds of our simulation time
-var start = Cesium.JulianDate.fromDate(new Date());
+var start = Cesium.JulianDate.fromDate(new Date(2015, 2, 25, 16));
 var stop = Cesium.JulianDate.addSeconds(start, 360, new Cesium.JulianDate());
 
 //Make sure viewer is at the desired time.

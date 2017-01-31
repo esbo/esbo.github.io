@@ -19,7 +19,20 @@
 <body>
   <div id="cesiumContainer"></div>
   <script>
-    var viewer = new Cesium.Viewer('cesiumContainer');
+    // Construct a terrain provider that uses per vertex normals for lighting
+    // to add shading detail to an imagery provider.
+    var terrainProvider = new Cesium.CesiumTerrainProvider({
+    url : '//assets.agi.com/stk-terrain/world',
+      requestVertexNormals : true
+    });
+    
+
+    var viewer = new Cesium.Viewer('cesiumContainer',{
+      baseLayerPicker : false,
+      terrainProvider : terrainProvider
+    });
+    
+    
     viewer.dataSources.add(Cesium.GeoJsonDataSource.load('esbo.json', {
       stroke: Cesium.Color.YELLOW.withAlpha(0.9),
       fill: Cesium.Color.BLUE.withAlpha(0.5),
@@ -27,6 +40,7 @@
       markerSymbol: '?',
       clampToGround: true
     }));
+    
   </script>
 </body>
 </html>

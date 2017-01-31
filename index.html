@@ -125,7 +125,8 @@ var entity = viewer.entities.add({
         uri : './Triangle.gltf',
         minimumPixelSize : 64
     },*/
-    model: Cesium.Model.fromGltf({url:'Triangle.gltf'}),
+    model: Cesium.Model.fromGltf({url:'Triangle.gltf',
+    scale : 2000.0}),
 
     //Show the path as a pink line sampled in 1 second increments.
     path : {

@@ -121,12 +121,10 @@ var entity = viewer.entities.add({
     orientation : new Cesium.VelocityOrientationProperty(position),
 
     //Load the Cesium plane model to represent the entity    
-    /*model: {
-            modelMatrix : Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(0.0, 0.0, 100.0)),
-            uri : 'Triangle.gltf',
-            id : 'M'
-            
-        },*/
+    model: {
+      uri: 'Triangle.gltf',
+      minimumPixelSize: 32
+    },
 
     //Show the path as a pink line sampled in 1 second increments.
     path : {
